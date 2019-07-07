@@ -1,0 +1,153 @@
+{
+	"id": "32323228-ffb3-01a5-b2f9-caf1f50a5cfc",
+	"name": "SpringWebFluxMongoDBDemo",
+	"description": "use company database and employee collection in mongodb",
+	"order": [
+		"a34e6d8b-5940-6789-e22f-985aa7e1d0cb",
+		"01a744c0-0883-99c7-164d-7b0dd2db6825",
+		"61838beb-b580-9ddc-e121-2d793aa802ae",
+		"c1857f4b-42b8-8d02-d713-f21b5e52302b",
+		"7d8ce12b-6c74-1f9d-fa1c-a6e1c7c76c22"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1562482039358,
+	"owner": "7978160",
+	"public": false,
+	"requests": [
+		{
+			"id": "01a744c0-0883-99c7-164d-7b0dd2db6825",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/employees",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1562483010485,
+			"name": "http://localhost:8080/employees",
+			"description": "",
+			"collectionId": "32323228-ffb3-01a5-b2f9-caf1f50a5cfc",
+			"responses": [],
+			"rawModeData": "{\n    \"name\": \"Mukesh Kumar\",\n    \"details\": \"Create Employee\"\n}"
+		},
+		{
+			"id": "61838beb-b580-9ddc-e121-2d793aa802ae",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/employees/5d2196d8aa1a9c0b70f89885",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "32323228-ffb3-01a5-b2f9-caf1f50a5cfc",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/employees/5d2196d8aa1a9c0b70f89885",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1562483119528,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7d8ce12b-6c74-1f9d-fa1c-a6e1c7c76c22",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/employees/5d2196d8aa1a9c0b70f89885",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "32323228-ffb3-01a5-b2f9-caf1f50a5cfc",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/employees/5d2196d8aa1a9c0b70f89885",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1562484942237,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "a34e6d8b-5940-6789-e22f-985aa7e1d0cb",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/employees",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1562483108575,
+			"name": "http://localhost:8080/employees",
+			"description": "",
+			"collectionId": "32323228-ffb3-01a5-b2f9-caf1f50a5cfc",
+			"responses": []
+		},
+		{
+			"id": "c1857f4b-42b8-8d02-d713-f21b5e52302b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/employees/5d2196d8aa1a9c0b70f89885",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "32323228-ffb3-01a5-b2f9-caf1f50a5cfc",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8080/employees/5d2196d8aa1a9c0b70f89885",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1562484784045,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n    \"name\": \"Bhawani Singh Shekhawat\",\n    \"details\": \"Update Employee\"\n}"
+		}
+	]
+}

@@ -1,0 +1,63 @@
+Create DB:-
+use company
+
+Create Data:- 
+db.employee.insertMany([{"name":"Bhawani Singh","details":"Employee Created","createdAt":1505383305602},{"name":"Karanveer Singh","details":"Employee Created","createdAt":1505383814847}]);
+
+Find All:-
+db.employee.find();
+db.getCollection('employee').find({})
+
+Delete All Data:-
+db.employee.deleteMany({});
+
+Drop Database:-
+use databaseName;
+db.dropDatabase();
+
+Data:-
+
+[
+{"id":"5d218ea2aa1a9c239c3ca480","name":"Kartika Shekhawat","details":"Get Employee","createdAt":"2019-07-07T06:18:10.132+0000"},
+{"id":"5d218ea3aa1a9c239c3ca481","name":"Karanveer Singh Shekhawat","details":"Update Employee","createdAt":"2019-07-07T06:18:11.811+0000"},
+{"id":"5d218ea4aa1a9c239c3ca482","name":"Bhawani Singh","details":"Create Employee","createdAt":"2019-07-07T06:18:12.510+0000"}
+]
+
+Run without test with profile (-Dmaven.test.skip=true ):
+$ mvn package -Pdev
+$ mvn package -Ptest
+
+OR -DskipTests in surefire plugin:-
+$ mvn package -DskipTests
+OR
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M1</version>
+    <configuration>
+        <skipTests>true</skipTests>
+    </configuration>
+</plugin>
+
+To skip some test classes:-
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-surefire-plugin</artifactId>
+	<version>3.0.0-M1</version>
+	<configuration>
+		<excludes>
+			<exclude>**/ClassOne*.java</exclude>
+			<exclude>**/ClassTwo*.java</exclude>
+		</excludes>
+	</configuration>
+</plugin>
+
+Maven Profile:- ($ mvn package -Pdev)
+<profiles>
+    <profile>
+		<id>dev</id>
+		<properties>
+			<maven.test.skip>true</maven.test.skip>
+		</properties>
+	</profile>
+</profiles>
