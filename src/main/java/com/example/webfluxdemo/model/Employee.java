@@ -38,7 +38,6 @@ public class Employee {
      * @param name
      */
     public Employee(String name, String details) {
-        this.id = id;
         this.name = name;
         this.details = details;
     };
