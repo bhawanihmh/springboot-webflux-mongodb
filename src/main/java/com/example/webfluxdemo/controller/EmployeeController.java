@@ -74,6 +74,19 @@ public class EmployeeController {
     // Employees are Sent to the client as Server Sent Events
     @GetMapping(value = "/stream/employees", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Employee> streamAllEmployees() {
-        return employeeRepository.findAll();
+    	 return employeeRepository.findAll()
+                 .flatMap(employee -> {
+                     Flux<Long> interval = Flux.interval(Duration.ofSeconds(3));
+                     Flux<Employee> employeeFlux =
+                             Flux.fromStream(
+                                    Stream.generate(() -> { 
+											employee.setCreatedAt(new Date());
+                                    		return employee;
+                                    	}
+                                    )
+                             );
+                     return Flux.zip(interval, employeeFlux)
+                             .map(Tuple2::getT2);
+                 });
     }
 }
